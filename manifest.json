@@ -1,7 +1,7 @@
 {
-  "name": "缁撴瀯杞崲鍣?,
-  "short_name": "缁撴瀯杞崲",
-  "description": "Minecraft 缁撴瀯鏂囦欢鏈湴浜掕浆锛歀itematica / MCStructure / Schematic",
+  "name": "结构转换器",
+  "short_name": "结构转换",
+  "description": "Minecraft 结构文件本地互转：Litematica / MCStructure / Schematic",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
