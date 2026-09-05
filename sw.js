@@ -1,4 +1,4 @@
-/* Service Worker锛氶潤鎬佽祫婧愮紦瀛?+ 鏇存柊 */
+/* Service Worker：静态资源缓存 + 更新 */
 "use strict";
 
 const CACHE = "sc-cache-v1";
@@ -30,10 +30,12 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
-  // 鏇存柊娓呭崟/API 姘歌繙璧扮綉缁?  if (url.pathname.startsWith("/api/")) return;
+  // 更新清单/API 永远走网络
+  if (url.pathname.startsWith("/api/")) return;
   if (e.request.method !== "GET") return;
 
-  // 闈欐€佽祫婧愶細stale-while-revalidate锛堝揩閫熷搷搴?+ 鍚庡彴鏇存柊锛?  if (url.pathname.startsWith("/") || url.pathname === "/") {
+  // 静态资源：stale-while-revalidate（快速响应 + 后台更新）
+  if (url.pathname.startsWith("/") || url.pathname === "/") {
     e.respondWith(
       caches.match(e.request).then((cached) => {
         const network = fetch(e.request).then((res) => {
@@ -49,5 +51,6 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // 鍏跺畠璇锋眰璧扮綉缁?  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+  // 其它请求走网络
+  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });
