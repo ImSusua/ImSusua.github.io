@@ -8,7 +8,7 @@
 "use strict";
 
 const Updater = (() => {
-  const MANIFEST_URL = "/api/app/manifest";
+  const MANIFEST_URL = "https://napcat.susua.cc.cd/api/app/manifest";
   const LS_KEY_VERSION = "sc_installed_version";
   const LS_KEY_SKIP = "sc_skip_version";
   const LS_KEY_LAST_CHECK = "sc_last_check";
