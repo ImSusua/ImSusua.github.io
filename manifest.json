@@ -1,7 +1,7 @@
 {
   "name": "结构转换器",
   "short_name": "结构转换",
-  "description": "Minecraft 结构文件本地互转：Litematica / MCStructure / Schematic",
+  "description": "Minecraft 结构文件本地互转工具：BDX / MCStructure / Schematic / Litematic / NBT 等 20+ 格式互转",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
