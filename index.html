@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StructureConverter - Minecraft 结构文件转换工具</title>
-<meta name="description" content="开源 Minecraft 结构文件本地互转工具，支持 20+ 格式，Android 原生应用">
+<meta name="description" content="Minecraft 结构文件本地互转工具，支持 20+ 格式，Android 原生应用">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -132,20 +132,20 @@ a:hover{text-decoration:underline}
 </nav>
 
 <section class="hero">
-  <div class="hero-badge"><span class="dot"></span> v1.1.5 已发布</div>
+  <div class="hero-badge"><span class="dot"></span> <span id="hero-ver">v1.2.0 已发布</span></div>
   <h1>Minecraft 结构文件<br>本地互转工具</h1>
-  <p>支持 20+ 种结构格式，全部在设备本地完成，无需上传服务器。开源、免费、无广告。</p>
+  <p>支持 20+ 种结构格式，全部在设备本地完成，无需上传服务器。免费、无广告。</p>
   <div class="hero-actions">
-    <a href="https://gh-proxy.com/https://github.com/ImSusua/ImSusua.github.io/releases/download/v1.1.5/StructureConverter-v1.1.5.apk" class="btn-primary">
+    <a href="https://gh-proxy.com/https://github.com/ImSusua/ImSusua.github.io/releases/download/v1.2.0/StructureConverter-v1.2.0.apk" class="btn-primary" id="dl-btn-hero">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
       下载 APK
     </a>
-    <a href="https://github.com/ImSusua/ImSusua.github.io" class="btn-secondary">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
-      源代码
+    <a href="#formats" class="btn-secondary">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-9.5C0 1.784.784 1 1.75 1ZM1.5 2.75v2.5h13v-2.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm13 4h-13v5.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"/></svg>
+      支持格式
     </a>
   </div>
-  <div class="hero-meta">Android 8.0+ &middot; ~12 MB &middot; 开源 GPL-3.0</div>
+  <div class="hero-meta">Android 8.0+ &middot; <span id="dl-size-hero">~12 MB</span> &middot; 本地处理，无需联网</div>
 </section>
 
 <section class="section" id="features">
@@ -230,18 +230,18 @@ a:hover{text-decoration:underline}
 
 <section class="section" id="download">
   <h2 class="section-title">下载</h2>
-  <p class="section-desc">免费下载，开源无广告。</p>
+  <p class="section-desc">免费下载，无广告。</p>
   <div class="download-box">
     <div class="download-info">
-      <h3>StructureConverter v1.1.5</h3>
+      <h3 id="dl-name">StructureConverter v1.2.0</h3>
       <p>Android 原生应用 &middot; 支持 Android 8.0+</p>
       <div class="download-meta">
         <span id="dl-size">~12 MB</span>
-        <span>SHA256: 4da5ec1d...</span>
+        <span id="dl-sha">SHA256: ac8a5872c1012564eeb949b629110522968ecc65b473be80def409cc7e3ef933</span>
       </div>
     </div>
     <div class="download-actions">
-      <a href="https://gh-proxy.com/https://github.com/ImSusua/ImSusua.github.io/releases/download/v1.1.5/StructureConverter-v1.1.5.apk" class="btn-primary" id="dl-btn">
+      <a href="https://gh-proxy.com/https://github.com/ImSusua/ImSusua.github.io/releases/download/v1.2.0/StructureConverter-v1.2.0.apk" class="btn-primary" id="dl-btn">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
         下载 APK
       </a>
@@ -251,8 +251,21 @@ a:hover{text-decoration:underline}
   <div class="versions" id="version-list">
     <div class="version-item">
       <div class="version-head">
-        <span class="version-tag">v1.1.5</span>
+        <span class="version-tag">v1.2.0</span>
         <span class="version-badge latest">最新</span>
+        <span class="version-date">2026-09-05</span>
+      </div>
+      <ul class="version-changes">
+        <li>新增 SCHEMATIC 编码支持（.schematic 旧格式导出）</li>
+        <li>新增 Litematica 编码支持（.litematic 导出）</li>
+        <li>新增 SCHEM_V1 编码支持（Sponge Schematic v1 导出）</li>
+        <li>调色板查找改用 HashMap 缓存，转换速度更快</li>
+        <li>包含全部 v1.1.5 功能</li>
+      </ul>
+    </div>
+    <div class="version-item">
+      <div class="version-head">
+        <span class="version-tag">v1.1.5</span>
         <span class="version-date">2026-09-05</span>
       </div>
       <ul class="version-changes">
@@ -287,19 +300,46 @@ a:hover{text-decoration:underline}
 </section>
 
 <footer class="footer">
-  <p>StructureConverter is open source software licensed under GPL-3.0</p>
-  <p style="margin-top:6px">Developer QQ: <a href="https://qm.qq.com/q/your-guild">3438228157</a> &middot; <a href="https://github.com/ImSusua/ImSusua.github.io">GitHub</a></p>
+  <p>&copy; 2026 StructureConverter</p>
+  <p style="margin-top:6px">开发者 QQ：3438228157</p>
 </footer>
 
 <script>
 (async function() {
   try {
-    const resp = await fetch('https://napcat.susua.cc.cd/api/app/manifest');
+    const resp = await fetch('https://napcat.susua.cc.cd/api/app/manifest', { cache: 'no-store' });
     const data = await resp.json();
     if (data.latest) {
-      const el = document.getElementById('dl-size');
-      const mb = (data.latest.size / 1024 / 1024).toFixed(1);
-      el.textContent = mb + ' MB';
+      const v = data.latest;
+      const url = v.url || ('https://gh-proxy.com/https://github.com/ImSusua/ImSusua.github.io/releases/download/v' + v.version + '/StructureConverter-v' + v.version + '.apk');
+      const size = (v.size / 1024 / 1024).toFixed(1);
+      // hero badge + size
+      const hv = document.getElementById('hero-ver');
+      if (hv) hv.textContent = 'v' + v.version + ' 已发布';
+      const hs = document.getElementById('dl-size-hero');
+      if (hs) hs.textContent = size + ' MB';
+      // download box
+      const dn = document.getElementById('dl-name');
+      if (dn) dn.textContent = 'StructureConverter v' + v.version;
+      const ds = document.getElementById('dl-size');
+      if (ds) ds.textContent = size + ' MB';
+      const dsh = document.getElementById('dl-sha');
+      if (dsh && v.sha256) dsh.textContent = 'SHA256: ' + v.sha256;
+      const db = document.getElementById('dl-btn');
+      if (db) db.href = url;
+      const hb = document.getElementById('dl-btn-hero');
+      if (hb) hb.href = url;
+      // prepend latest version into the version list
+      if (v.changelog && v.changelog.length) {
+        const list = document.getElementById('version-list');
+        const item = document.createElement('div');
+        item.className = 'version-item';
+        item.innerHTML = '<div class="version-head"><span class="version-tag">v' + v.version + '</span>' +
+          '<span class="version-badge latest">最新</span>' +
+          '<span class="version-date">' + (v.published_at ? new Date(v.published_at * 1000).toISOString().slice(0, 10) : '') + '</span></div>' +
+          '<ul class="version-changes">' + v.changelog.map(c => '<li>' + c.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</li>').join('') + '</ul>';
+        list.prepend(item);
+      }
     }
   } catch(e) {}
 })();
